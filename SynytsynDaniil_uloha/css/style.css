@@ -1,0 +1,521 @@
+/* =========================================================
+   Osobná webová stránka – Daniil Synytsyn
+   Predmet: Tvorba webových stránok
+   Spoločný štýl pre všetky podstránky
+   ========================================================= */
+
+/* ---------- Premenné (farby) ---------- */
+:root {
+    --pozadie: #120a1f;
+    --pozadie-karta: #1d1230;
+    --pozadie-hlavicka: #241040;
+    --fialova: #7b3fd1;
+    --fialova-svetla: #b58cff;
+    --fialova-tmava: #3a1a66;
+    --text: #ece4f7;
+    --text-tlmeny: #b3a6c9;
+    --prednaska: #6a3fb5;
+    --cvicenie: #1f7f73;
+    --blokova: #5c566a;
+    --okraj: #3b2a57;
+}
+
+/* ---------- Univerzálny selektor ---------- */
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- Selektory elementov ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--pozadie);
+    background-image: radial-gradient(circle at top, #2b1450 0%, var(--pozadie) 60%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+h2 {
+    border-left: 5px solid var(--fialova-svetla);
+    padding-left: 12px;
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--fialova-svetla);
+}
+
+a {
+    color: var(--fialova-svetla);
+}
+
+a:hover,
+a:focus {
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--fialova-svetla), transparent);
+    margin: 32px 0;
+}
+
+/* ---------- Hlavička ---------- */
+body > header {
+    background-color: var(--pozadie-hlavicka);
+    border-bottom: 3px solid var(--fialova);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.obal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .obal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header h1 span {
+    color: var(--fialova-svetla);
+}
+
+/* ---------- Hlavné menu ---------- */
+#hlavne-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+#hlavne-menu a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#hlavne-menu a:hover,
+#hlavne-menu a:focus {
+    background-color: var(--fialova-tmava);
+    color: #ffffff;
+}
+
+/* zvýraznená položka menu práve otvorenej podstránky */
+#hlavne-menu a.aktivna {
+    background-color: var(--fialova);
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(181, 140, 255, 0.6);
+}
+
+/* ---------- Hlavný obsah ---------- */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+}
+
+main > section,
+main > article {
+    background-color: var(--pozadie-karta);
+    border: 1px solid var(--okraj);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 26px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.uvod p:first-of-type {
+    font-size: 1.15rem;
+}
+
+/* ---------- Domov – náhľady podstránok ---------- */
+.nahlad h2 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nahlad h2 a:hover {
+    color: var(--fialova-svetla);
+}
+
+.nahlad figure {
+    margin: 0 0 12px;
+}
+
+.nahlad img {
+    width: 300px;
+    border: 3px solid var(--fialova);
+    border-radius: 10px;
+    display: block;
+}
+
+.nahlad .titulny-ovalny {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.citat-viac {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.citat-viac::after {
+    content: " →";
+}
+
+/* ---------- O mne – stránkové menu ---------- */
+#stranka-menu {
+    background-color: var(--fialova-tmava);
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 26px;
+}
+
+#stranka-menu ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+}
+
+#stranka-menu a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#stranka-menu a::before {
+    content: "# ";
+    color: var(--text-tlmeny);
+}
+
+/* pri skoku na sekciu nech ju neprekryje hlavička */
+section[id] {
+    scroll-margin-top: 110px;
+}
+
+/* ---------- O mne – fotka a profil ---------- */
+.profil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.profil figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* oválna fotka pomocou CSS */
+.foto-ovalna {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--fialova-svetla);
+    box-shadow: 0 0 25px rgba(181, 140, 255, 0.45);
+}
+
+.profil figcaption {
+    color: var(--text-tlmeny);
+    margin-top: 8px;
+}
+
+.profil > div {
+    flex: 1;
+    min-width: 260px;
+}
+
+/* zoznam škôl – číslovaný a vnorený nečíslovaný */
+.skoly > li {
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.skoly ul {
+    font-weight: normal;
+    list-style-type: disc;
+}
+
+.zaluby li::marker {
+    color: var(--fialova-svetla);
+}
+
+/* ---------- Tabuľky (spoločné) ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: var(--text-tlmeny);
+}
+
+th,
+td {
+    padding: 10px 14px;
+    border: 1px solid var(--okraj);
+}
+
+thead th {
+    background-color: var(--fialova);
+    color: #ffffff;
+}
+
+/* tabuľka zručností – striedanie farieb riadkov */
+.zrucnosti {
+    max-width: 600px;
+}
+
+.zrucnosti tbody tr:nth-child(even) {
+    background-color: rgba(123, 63, 209, 0.15);
+}
+
+.zrucnosti tbody tr:hover {
+    background-color: rgba(123, 63, 209, 0.35);
+}
+
+/* ---------- Rozvrh ---------- */
+.rozvrh-obal {
+    overflow-x: auto;
+}
+
+.rozvrh {
+    min-width: 900px;
+    table-layout: fixed;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.rozvrh thead th {
+    font-size: 0.8rem;
+}
+
+.rozvrh tbody th {
+    width: 50px;
+    background-color: var(--fialova-tmava);
+}
+
+.rozvrh td {
+    height: 86px;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+.rozvrh td strong {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.rozvrh td small {
+    display: block;
+    opacity: 0.85;
+}
+
+/* farebné odlíšenie prednášok a cvičení – triedne selektory */
+.prednaska {
+    background-color: var(--prednaska);
+    color: #ffffff;
+}
+
+.cvicenie {
+    background-color: var(--cvicenie);
+    color: #ffffff;
+}
+
+.blokova {
+    background-color: var(--blokova);
+    color: #ffffff;
+}
+
+.rozvrh td.prednaska,
+.rozvrh td.cvicenie,
+.rozvrh td.blokova {
+    border-radius: 8px;
+    border: 3px solid var(--pozadie-karta);
+}
+
+.legenda {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+}
+
+.legenda span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* ---------- Moje hoby – galéria ---------- */
+.galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.galeria figure {
+    margin: 0;
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.galeria a:hover img,
+.galeria a:focus img {
+    transform: scale(1.04);
+    border-color: var(--fialova-svetla);
+}
+
+.galeria figcaption {
+    text-align: center;
+    color: var(--text-tlmeny);
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+/* ---------- Kontakt ---------- */
+.kontakt-mriezka {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+address {
+    font-style: normal;
+}
+
+.kontakt-zoznam {
+    list-style: none;
+    padding: 0;
+}
+
+.kontakt-zoznam li {
+    margin-bottom: 10px;
+}
+
+/* atribútové selektory – ikonky podľa typu odkazu */
+a[href^="mailto:"]::before {
+    content: "✉ ";
+}
+
+a[href^="tel:"]::before {
+    content: "☎ ";
+}
+
+a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+}
+
+.galeria a[target="_blank"]::after {
+    content: none;
+}
+
+.hodiny td:first-child {
+    font-weight: 600;
+}
+
+/* ---------- Päta ---------- */
+body > footer {
+    background-color: var(--pozadie-hlavicka);
+    border-top: 3px solid var(--fialova);
+    text-align: center;
+    padding: 18px 20px;
+    color: var(--text-tlmeny);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---------- Mobilné zobrazenie ---------- */
+@media (max-width: 700px) {
+    header .obal {
+        flex-direction: column;
+    }
+
+    #hlavne-menu ul {
+        justify-content: center;
+    }
+
+    main > section,
+    main > article {
+        padding: 20px;
+    }
+
+    .nahlad img {
+        width: 100%;
+    }
+}
