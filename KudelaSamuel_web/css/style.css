@@ -1,0 +1,329 @@
+/* =========================================
+   Osobná stránka - Samuel Kúdela
+   hlavný štýl pre všetky podstránky
+   ========================================= */
+
+/* ---- zakladne nastavenia ---- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+    background-color: #eef1f6;
+}
+
+/* ---- hlavicka ---- */
+header {
+    background-color: #1c3f8c;
+    color: white;
+    border-bottom: 5px solid #c8102e;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px 20px 5px 20px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+header .podnadpis {
+    margin: 0;
+    padding-bottom: 12px;
+    text-align: center;
+    font-style: italic;
+    color: #cfd9f0;
+}
+
+/* ---- hlavne menu ---- */
+#hlavne-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #163270;
+}
+
+#hlavne-menu li {
+    display: inline-block;
+}
+
+#hlavne-menu a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hlavne-menu a:hover {
+    background-color: #2d5bb8;
+}
+
+/* zvyraznenie polozky, na ktorej sa navstevnik prave nachadza */
+#hlavne-menu a.aktivna {
+    background-color: #c8102e;
+}
+
+/* ---- hlavny obsah ---- */
+main {
+    max-width: 960px;
+    margin: 25px auto;
+    padding: 20px 30px;
+    background-color: white;
+    border: 1px solid #ccd3e0;
+    border-radius: 6px;
+}
+
+h2 {
+    color: #1c3f8c;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #c8102e;
+    margin-top: 30px;
+}
+
+a {
+    color: #1c3f8c;
+}
+
+a:hover {
+    color: #c8102e;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #1c3f8c;
+    margin: 25px 0;
+}
+
+/* ---- Domov - nahlady podstranok ---- */
+.uvod {
+    background-color: #f4f6fb;
+    border-left: 5px solid #c8102e;
+    padding: 5px 15px;
+}
+
+.nahlad h2 a {
+    text-decoration: none;
+}
+
+.nahlad img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid #1c3f8c;
+}
+
+.nahlad .viac {
+    font-weight: bold;
+}
+
+/* ---- O mne ---- */
+#stranove-menu {
+    background-color: #f4f6fb;
+    border: 1px dashed #1c3f8c;
+    padding: 10px 15px;
+}
+
+#stranove-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#stranove-menu li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#stranove-menu li::before {
+    content: "» ";
+    color: #c8102e;
+}
+
+/* ovalna fotka - obrazok nie je stvorec, takze 50% spravi oval */
+.profilova-fotka {
+    float: right;
+    width: 220px;
+    height: auto;
+    margin: 0 0 15px 20px;
+    border-radius: 50%;
+    border: 4px solid #c8102e;
+}
+
+.meno {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1c3f8c;
+}
+
+.vzdelanie > li {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.vzdelanie ul {
+    font-weight: normal;
+}
+
+.vycistenie {
+    clear: both;
+}
+
+/* tabulky - zrucnosti a kontakt */
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #b5bfd3;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #1c3f8c;
+    color: white;
+}
+
+.zrucnosti tbody tr:nth-child(even) {
+    background-color: #f4f6fb;
+}
+
+.zrucnosti td:first-child {
+    font-weight: bold;
+}
+
+/* ---- Rozvrh ---- */
+.rozvrh-obal {
+    overflow-x: auto;
+}
+
+.rozvrh {
+    width: 100%;
+    font-size: 14px;
+}
+
+.rozvrh caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.rozvrh th,
+.rozvrh td {
+    text-align: center;
+    height: 70px;
+}
+
+.rozvrh tbody th {
+    background-color: #e3e8f3;
+    width: 90px;
+}
+
+/* prednasky a cvicenia su farebne odlisene */
+.prednaska {
+    background-color: #f7d4d9;
+    border-left: 4px solid #c8102e;
+}
+
+.cvicenie {
+    background-color: #d3def5;
+    border-left: 4px solid #1c3f8c;
+}
+
+.miestnost {
+    display: block;
+    font-size: 12px;
+    color: #555;
+}
+
+.legenda span {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-right: 10px;
+}
+
+/* ---- Moje hoby - galeria ---- */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.galeria figure {
+    margin: 0;
+    width: 160px;
+    text-align: center;
+}
+
+.galeria img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid #1c3f8c;
+}
+
+.galeria a:hover img {
+    border-color: #c8102e;
+    opacity: 0.85;
+}
+
+.galeria figcaption {
+    font-size: 13px;
+    color: #555;
+}
+
+/* ---- Kontakt ---- */
+address {
+    font-style: normal;
+    background-color: #f4f6fb;
+    padding: 10px 15px;
+    border-left: 5px solid #1c3f8c;
+}
+
+a[href^="mailto:"],
+a[href^="tel:"] {
+    font-weight: bold;
+}
+
+/* ---- pata ---- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1c3f8c;
+    color: white;
+    border-top: 5px solid #c8102e;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---- mobil ---- */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 10px 15px;
+    }
+
+    #hlavne-menu a {
+        padding: 10px;
+    }
+
+    .profilova-fotka {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+}
