@@ -26,12 +26,14 @@
 
     <main>
         <h2>Môj rozvrh</h2>
-        <p>Takto vyzerá môj týždeň na Fakulte ekonomiky a manažmentu SPU v Nitre v zimnom
-            semestri. Prednášky a cvičenia sú v tabuľke odlíšené farbou.</p>
+        <p>Takto vyzerá môj týždeň v zimnom semestri 2026/2027 na Fakulte ekonomiky a manažmentu
+            SPU v Nitre. Rozvrh platí od 21. 9. do 20. 12. 2026. Prednášky, cvičenia a blokové
+            akcie sú v tabuľke odlíšené farbou.</p>
 
         <p class="legenda">
             <span class="prednaska">Prednáška</span>
             <span class="cvicenie">Cvičenie</span>
+            <span class="blokova">Bloková akcia</span>
         </p>
 
         <div class="rozvrh-obal">
@@ -40,50 +42,59 @@
                 <thead>
                     <tr>
                         <th>Deň</th>
-                        <th>7:30 &ndash; 9:00</th>
-                        <th>9:10 &ndash; 10:40</th>
-                        <th>10:50 &ndash; 12:20</th>
-                        <th>13:00 &ndash; 14:30</th>
-                        <th>14:40 &ndash; 16:10</th>
+                        <th>8:00<br>9:00</th>
+                        <th>9:00<br>10:00</th>
+                        <th>10:00<br>11:00</th>
+                        <th>11:00<br>12:00</th>
+                        <th>12:00<br>13:00</th>
+                        <th>13:00<br>14:00</th>
+                        <th>14:00<br>15:00</th>
+                        <th>15:00<br>16:00</th>
+                        <th>16:00<br>17:00</th>
+                        <th>17:00<br>18:00</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Pondelok</th>
-                        <td class="prednaska">Makroekonómia <span class="miestnost">AE-01</span></td>
-                        <td class="cvicenie">Makroekonómia <span class="miestnost">AE-12</span></td>
+                        <td class="prednaska" colspan="2"><strong>Podnikové hospodárstvo</strong><span class="miestnost">S-01</span><span class="vyucujuci">N. Turčeková</span></td>
                         <td></td>
-                        <td class="cvicenie">Anglický jazyk <span class="miestnost">AE-23</span></td>
+                        <td></td>
+                        <td></td>
+                        <td class="prednaska" colspan="2"><strong>Štatistika I A</strong><span class="miestnost">S</span><span class="vyucujuci">M. Pietriková</span></td>
+                        <td class="prednaska" colspan="2"><strong>Tvorba web stránok</strong><span class="miestnost">S</span><span class="vyucujuci">T. Tóth</span></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th scope="row">Utorok</th>
+                        <td class="cvicenie" colspan="2"><strong>Podnikové hospodárstvo</strong><span class="miestnost">AE-72</span><span class="vyucujuci">Z. Kapustová</span></td>
+                        <td class="cvicenie" colspan="2"><strong>Retail Akadémia I.</strong><span class="miestnost">AS-31</span><span class="vyucujuci">I. Košičiarová</span></td>
                         <td></td>
-                        <td class="prednaska">Účtovníctvo <span class="miestnost">AE-02</span></td>
-                        <td class="cvicenie">Účtovníctvo <span class="miestnost">AE-15</span></td>
-                        <td class="cvicenie">Informatika <span class="miestnost">AE-31</span></td>
-                        <td></td>
+                        <td class="prednaska" colspan="3"><strong>Verejná voľba</strong><span class="miestnost">S</span><span class="vyucujuci">R. Serenčéš</span></td>
+                        <td class="cvicenie" colspan="2"><strong>Verejná voľba</strong> <span class="poznamka">(párny týždeň)</span><span class="miestnost">S</span><span class="vyucujuci">R. Serenčéš</span></td>
                     </tr>
                     <tr>
                         <th scope="row">Streda</th>
-                        <td class="prednaska">Štatistika <span class="miestnost">AE-01</span></td>
-                        <td class="cvicenie">Štatistika <span class="miestnost">AE-31</span></td>
-                        <td class="prednaska">Marketing <span class="miestnost">AE-02</span></td>
                         <td></td>
+                        <td></td>
+                        <td class="cvicenie" colspan="2"><strong>Ruský jazyk &ndash; začiatočník</strong><span class="miestnost">AE-4-KK</span><span class="vyucujuci">M. Fördösová</span></td>
+                        <td></td>
+                        <td class="cvicenie" colspan="2"><strong>Posilňovanie (TV)</strong><span class="miestnost">FIT (D1), areál CUS</span><span class="vyucujuci">Ľ. Urban</span></td>
+                        <td class="prednaska" colspan="2"><strong>Poľovníctvo I</strong><span class="miestnost">Z-01</span><span class="vyucujuci">J. Slamečka</span></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th scope="row">Štvrtok</th>
+                        <td class="prednaska" colspan="2"><strong>Ekonomika poľnohospodárstva</strong><span class="miestnost">S</span><span class="vyucujuci">I. Adamičková</span></td>
+                        <td class="cvicenie" colspan="2"><strong>Ekonomika poľnohospodárstva</strong><span class="miestnost">AE-71</span><span class="vyucujuci">I. Adamičková</span></td>
                         <td></td>
-                        <td class="prednaska">Podniková ekonomika <span class="miestnost">AE-01</span></td>
-                        <td class="cvicenie">Podniková ekonomika <span class="miestnost">AE-14</span></td>
-                        <td class="cvicenie">Marketing <span class="miestnost">AE-16</span></td>
+                        <td class="cvicenie" colspan="2"><strong>Štatistika I A</strong><span class="miestnost">AS-06</span><span class="vyucujuci">E. Richterová</span></td>
+                        <td class="cvicenie" colspan="2"><strong>Tvorba web stránok</strong><span class="miestnost">AS-07</span><span class="vyucujuci">T. Tóth</span></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th scope="row">Piatok</th>
-                        <td class="prednaska">Manažment <span class="miestnost">AE-02</span></td>
-                        <td class="cvicenie">Manažment <span class="miestnost">AE-12</span></td>
+                        <td class="blokova" colspan="7"><strong>Poľovníctvo I &ndash; terénne cvičenie</strong> <span class="poznamka">(bloková akcia 30. 10. a 6. 11.)</span><span class="miestnost">Revír SPU</span><span class="vyucujuci">J. Slamečka</span></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -92,12 +103,12 @@
             </table>
         </div>
 
-        <p>Piatok končím už pred obedom, takže víkend sa mi väčšinou začína skôr &ndash; a to je
-            ideálny čas vyraziť na turistiku.</p>
+        <p>Najviac sa teším na stredu &ndash; poobede mám posilňovanie a hneď potom prednášku
+            z poľovníctva. Ak nie je uvedené inak, výučba prebieha v Centrálnom areáli SPU.</p>
     </main>
 
     <footer>
-        <p>&copy; 2026 Samuel Kúdela | Informatika | SPU v Nitre</p>
+        <p>&copy; 2026 Samuel Kúdela | Tvorba web stránok | SPU v Nitre</p>
     </footer>
 
 </body>
